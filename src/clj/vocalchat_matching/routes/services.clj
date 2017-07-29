@@ -22,7 +22,7 @@
                     linenumber :- Long,
                     stack :- String]
       :summary     "Report an error"
-      (let [output-file (str (f/unparse (f/formatters :basic-date-time-no-ms) (t/now))
+      (let [output-file (str "error_logs/" (f/unparse (f/formatters :basic-date-time-no-ms) (t/now))
                              ".edn")
             user-agent  (get-in req [:headers "user-agent"])
             data        {:message     message
