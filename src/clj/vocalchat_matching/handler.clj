@@ -14,6 +14,7 @@
 (def app-routes
   (routes
     #'websocket-routes
+    #'service-routes
     (route/not-found
       "page not found")))
 
